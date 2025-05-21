@@ -1,0 +1,33 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "[Le projet](./docs/demande-client/)",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "node --watch --env-file=.env index.js",
+    "start": "node --env-file=.env index.js",
+    "db:create": "psql -U ocaffe -d ocaffe -f ./data/create-db.sql",
+    "import": "node scripts/importData.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Athenes/SB04-Ocoffee-Manu-Alriche.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-Athenes/SB04-Ocoffee-Manu-Alriche/issues"
+  },
+  "homepage": "https://github.com/O-clock-Athenes/SB04-Ocoffee-Manu-Alriche#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "pg": "^8.16.0"
+  }
+}

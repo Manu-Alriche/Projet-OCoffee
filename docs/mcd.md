@@ -1,3 +1,3 @@
 # MCD
 
-![mcd](../images/cmd.png)
+![mcd](../docs/images/cmd.png)
