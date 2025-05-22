@@ -1,91 +1,35 @@
-<%- include('partials/header') %>
+<%- include('partials/headerC') %>
 
     <section id="catalog">
         <h1>Notre catalogue</h1>
 
-        <div class="articles only-display-3-articles" id="articles-list">
-            <article>
-                <% if (locals.cafe && Array.isArray(locals.cafe) && locals.cafe.length> 0) { %>
-                    <% for (const cafe of locals.cafe) { %>
-                        <img src="<%= cafe.reference %>" alt="Sumatra Mandheling" />
+        <div class="articles" id="articles-list">
+
+            <% if (locals.cafe && Array.isArray(locals.cafe) && locals.cafe.length> 0) { %>
+                <% for (const cafe of locals.cafe) { %>
+                    <article>
+                        <img src="../images/coffees/<%= cafe.reference %>.png" alt="<%=cafe.nom %>" />
                         <div>
 
                             <h2>
-                                <%= cafe.id %>
+                                <%= cafe.nom %>
                             </h2>
                             <p>
-                                <%= cafe.id_origine %>
+                                Origine : <%= cafe.origine %>
                             </p>
                             <p>
-                                <%= cafe.prix_kg %>
+                                Prix : <%= cafe.prix_kg %> €/kg
                             </p>
-                            <a class="button-outline" href="#">Voir le détail</a>
-                            <% } %>
-                                <% } else { %>
-                                    <li>Pas de produit disponibles</li>
-                                    <% } %>
+                            <a class="button-outline" href="/catalogue/<%= cafe.id %>">Voir le détail</a>
                         </div>
-            </article>
+                    </article>
+                    <% } %>
+                        <% } else { %>
+                            <p>Pas de produit disponibles</p>
+                            <% } %>
 
-            <article>
-                <img src="../images/coffees/295432730.png" alt="Sumatra Mandheling" />
-                <div>
-                    <h2>Sumatra Mandheling</h2>
-                    <p>Origine Indonésie</p>
-                    <p>25,99 €/kg</p>
-                    <a class="button-outline" href="#">Voir le détail</a>
-                </div>
-            </article>
 
-            <article>
-                <img src="../images/coffees/295432730.png" alt="Sumatra Mandheling" />
-                <div>
-                    <h2>Sumatra Mandheling</h2>
-                    <p>Origine Indonésie</p>
-                    <p>25,99 €/kg</p>
-                    <a class="button-outline" href="#">Voir le détail</a>
-                </div>
-            </article>
 
-            <article>
-                <img src="../images/coffees/295432730.png" alt="Sumatra Mandheling" />
-                <div>
-                    <h2>Sumatra Mandheling</h2>
-                    <p>Origine Indonésie</p>
-                    <p>25,99 €/kg</p>
-                    <a class="button-outline" href="#">Voir le détail</a>
-                </div>
-            </article>
-
-            <article>
-                <img src="../images/coffees/295432730.png" alt="Sumatra Mandheling" />
-                <div>
-                    <h2>Sumatra Mandheling</h2>
-                    <p>Origine Indonésie</p>
-                    <p>25,99 €/kg</p>
-                    <a class="button-outline" href="#">Voir le détail</a>
-                </div>
-            </article>
-
-            <article>
-                <img src="../images/coffees/295432730.png" alt="Sumatra Mandheling" />
-                <div>
-                    <h2>Sumatra Mandheling</h2>
-                    <p>Origine Indonésie</p>
-                    <p>25,99 €/kg</p>
-                    <a class="button-outline" href="#">Voir le détail</a>
-                </div>
-            </article>
-
-            <article>
-                <img src="../images/coffees/295432730.png" alt="Sumatra Mandheling" />
-                <div>
-                    <h2>Sumatra Mandheling 2</h2>
-                    <p>Origine Indonésie</p>
-                    <p>25,99 €/kg</p>
-                    <a class="button-outline" href="#">Voir le détail</a>
-                </div>
-            </article>
         </div>
 
         <button class="button" id="see-all-products-button">

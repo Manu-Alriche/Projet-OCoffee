@@ -1,0 +1,36 @@
+<%- include('partials/headerP') %>
+
+    <section id="produit">
+        <h1>
+            <%= cafe.nom %>
+        </h1>
+
+        <div class="articles" id="articles-list">
+            <article>
+                <img src="../images/coffees/<%= cafe.reference %>.png" alt="<%=cafe.nom %>" />
+                <div>
+                    <h2>
+                        <%= cafe.nom %>
+                    </h2>
+                    <p>
+                        Description : <%= cafe.description %>
+                    </p>
+                    <p>
+                        Origine : <%= cafe.origine %>
+                    </p>
+                    <p>
+                        Prix : <%= cafe.prix_kg %> €/kg
+                    </p>
+                    <p>
+                        En stock : <%= cafe.disponible %>
+                    </p>
+                    <p>
+                        <a href="/catalogue/<%= cafe.id %>/add-to-cart" class="button">Ajouter au panier</a>
+                    </p>
+                    <a class="button-outline" href="/catalogue">Retour au catalogue</a>
+                </div>
+            </article>
+
+        </div>
+
+        <%- include('partials/footer') %>
