@@ -3,7 +3,7 @@ import { db } from "../services/dbClient.js";
 export const catalogueMapper = {
   async getAll() {
     const result = await db.query(
-      "SELECT * , origine.pays AS origine FROM cafe JOIN origine ON cafe.id_origine::int = origine.id;"
+      "SELECT cafe.* , origine.pays AS origine FROM cafe JOIN origine ON cafe.id_origine::int = origine.id;"
     );
     return result.rows;
   },

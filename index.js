@@ -1,11 +1,7 @@
 import express from "express";
-import dotenv from "dotenv";
 import { router } from "./src/routes/index.js";
 import path from "path";
 import { fileURLToPath } from "url";
-
-// Charger les variables d’environnement
-dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -16,7 +12,7 @@ const __dirname = path.dirname(__filename);
 
 // Configuration des vues
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "src", "views"));
+app.set("views", path.join(__dirname, "src", "./views"));
 
 // Middlewares
 app.use(express.json());

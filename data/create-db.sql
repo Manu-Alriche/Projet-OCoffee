@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS "cafe_caracteristique","cafe", "caracteristique", "origine";
+
 CREATE TABLE origine (
   id SERIAL PRIMARY KEY,
   pays VARCHAR(100) NOT NULL
@@ -90,5 +92,7 @@ INSERT INTO cafe_caracteristique (id_cafe, id_caracteristique) VALUES
     (14, 2), -- Peruvian Arabica - Chocolaté
     (15, 4), -- Hawaiian Kona - Doux
     (15, 6), -- Nicaraguan Maragogipe - Fruité
+    (16, 3),
+    (16, 6);
     
    

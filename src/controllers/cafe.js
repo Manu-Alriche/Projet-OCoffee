@@ -9,6 +9,7 @@ export const cafeController = {
         .status(404)
         .render("error", { statusCode: 404, message: "Cafe not found" });
     }
+    res.locals.style = "produit";
     res.render("cafe", { cafe });
   },
 };

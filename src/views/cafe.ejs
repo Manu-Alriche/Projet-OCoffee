@@ -1,4 +1,4 @@
-<%- include('partials/headerP') %>
+<%- include('partials/header') %>
 
     <section id="produit">
         <h1>
@@ -13,21 +13,32 @@
                         <%= cafe.nom %>
                     </h2>
                     <p>
+                        Ref. <%= cafe.reference %>
+                    </p>
+                    <p>
                         Description : <%= cafe.description %>
                     </p>
+                    <p>Catégorie(s) :</p>
+                    <ul>
+                        <% for (const caracteristique of cafe.caracteristique) { %>
+                            <li>
+                                <%= caracteristique %>
+                            </li>
+                            <% } %>
+                    </ul>
                     <p>
                         Origine : <%= cafe.origine %>
                     </p>
+
                     <p>
                         Prix : <%= cafe.prix_kg %> €/kg
                     </p>
-                    <p>
-                        En stock : <%= cafe.disponible %>
-                    </p>
-                    <p>
-                        <a href="/catalogue/<%= cafe.id %>/add-to-cart" class="button">Ajouter au panier</a>
-                    </p>
-                    <a class="button-outline" href="/catalogue">Retour au catalogue</a>
+                    <% if (cafe.disponible) { %>
+                        <span>✅ En stock</span>
+                        <% } else { %>
+                            <span>❌ Rupture de stock</span>
+                            <% } %>
+                                <a class="button-outline" href="/catalogue">Retour au catalogue</a>
                 </div>
             </article>
 

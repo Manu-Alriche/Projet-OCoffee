@@ -1,10 +1,7 @@
-import { homeMapper } from "../datamappers/home.js";
-
-export const homeController = {
-  async homePage(req, res) {
-    const cafe = await homeMapper.getNewCafe();
+export const histoireController = {
+  async histoirePage(req, res) {
     res.locals.style = "home";
-    res.render("home", { cafe });
+    res.render("histoire");
   },
 
   error404: (_, res) => {

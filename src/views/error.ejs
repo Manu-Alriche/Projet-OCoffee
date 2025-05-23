@@ -1,10 +1,15 @@
 <%- include('partials/header') %>
-
-    <h1>Error</h1>
-    <p>
-        <%=locals.statusCode%>
-            <%=locals.message%>
-    </p>
-
+    <section id="about">
+        <div>
+            <h1>Error <%=locals.statusCode%>,
+                    <%=locals.message%>
+            </h1>
+            <p>Désolé, la page que vous cherchez n'existe pas ou a été supprimée. <br>
+                Vous pouvez retourner à la page d'accueil ou explorer notre catalogue.</p>
+            <a class="button" href="/">Accueil</a> <br>
+            <a class="button" href="/catalogue">Découvrir notre catalogue</a>
+        </div>
+        <img src="../images/about.jpg" alt="Selection de nos meilleurs cafés oCoffee">
+    </section>
 
     <%- include('partials/footer') %>
