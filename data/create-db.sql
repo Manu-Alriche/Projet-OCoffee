@@ -92,7 +92,7 @@ INSERT INTO cafe_caracteristique (id_cafe, id_caracteristique) VALUES
     (14, 2), -- Peruvian Arabica - Chocolaté
     (15, 4), -- Hawaiian Kona - Doux
     (15, 6), -- Nicaraguan Maragogipe - Fruité
-    (16, 3),
-    (16, 6);
+    (16, 3), -- Hawaiian Kona - Corsé
+    (16, 6); -- Nicaraguan Maragogipe - Fruité
     
    
