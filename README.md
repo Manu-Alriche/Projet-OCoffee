@@ -19,4 +19,4 @@ L'intégration de données par notre équipe, nous souhaitons une séparation en
 
 ## Resultat final
 
-![CMD](./docs/images/cmd.png)
+![CMD](./docs/images/mcd.png)
